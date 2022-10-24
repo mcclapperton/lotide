@@ -1,26 +1,3 @@
-const eqArrays = function (firstArr, secondArr) {
-  if (firstArr.length !== secondArr.length) {
-    return false;
-  }
-
-  for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-const assertArraysEqual = function (firstArr, secondArr) {
-  let same = eqArrays(firstArr, secondArr);
-  let final = "";
-  if (same) {
-    final += `👌👌 Assertion passed: [${firstArr}] === [${secondArr}]`;
-  } else {
-    final += `😡😡 Assertion passed: [${firstArr}] !== [${secondArr}]`;
-  }
-  console.log(final);
-};
 const middle = function (middleArr) {
   let oddArray = [];
   let index = middleArr.length;
@@ -34,8 +11,7 @@ const middle = function (middleArr) {
   if (index % 2 !== 0) {
     oddArray.push(middleArr[Math.floor(index / 2)]);
   }
-  console.log(oddArray);
+  return oddArray;
 };
-const words = [1, 2, 3, 4];
 
-assertArraysEqual(middle(words), [2, 3]);
+module.exports = middle;
