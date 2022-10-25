@@ -1,7 +1,7 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "a library of tools created for lotide project, based on instruction from Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -101,7 +101,7 @@
     "type": "git",
     "url": "git+https://github.com/mcclapperton/lotide.git"
   },
-  "author": "",
+  "author": "mclap",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mcclapperton/lotide/issues"
