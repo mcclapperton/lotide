@@ -1,11 +1,11 @@
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
 const tail = require("../tail");
 
-const evaluated = tail(["yoohoo", "yellow", "frame"]);
-assertEqual(evaluated.length, 2);
-assertEqual(evaluated[0], "yellow");
-assertEqual(evaluated[1], "frame");
-
-const otherWords = ["me", "flower", "pony"];
-tail(otherWords);
-assertEqual(otherWords.length, 3);
+describe("#tail", () => {
+  it("returns 'yellow', 'frame' for ['yoohoo', 'yellow', 'frame']", () => {
+    assert.deepEqual(tail(["yoohoo", "yellow", "frame"]), ["yellow", "frame"]);
+  });
+  it("returns 'flower', 'pony' for ['me', 'flower', 'pony']", () => {
+    assert.deepEqual(tail(["me", "flower", "pony"]), ["flower", "pony"]);
+  });
+});
